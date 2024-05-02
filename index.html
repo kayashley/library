@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>library</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <h1>Library2Go 📚</h1>
+        </header>
+            <!-- main -->
+            <div class="main">
+                <span class="book-span">Click + to add <br> to your library</span>
+                <button class="book-btn" onclick="">+ Book</button>
+
+                <dialog class="dialog">
+                    <form onsubmit="Book()">
+                        <h5>Fill in below to add your book:</h5>
+                        <label class="label">Title: </label>
+                        <input class="input" type="text">
+                        <label class="label">Author: </label>
+                        <input class="input" type="text">
+                        <label class="label">Pages: </label>
+                        <input class="input" type="number">
+                        <label class="label">Read: </label>
+                        <input class="input" type="checkbox">
+                    </form>
+                    <div class="btn-dialog">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="close-btn">Confirm</button>
+                    </div>
+                    
+                </dialog>
+            </div>
+
+            <!-- container -->
+            <div class="container">
+            </div>
+
+        <!-- script -->
+        <script src="script.js"></script>
+    </body>
+</html>
