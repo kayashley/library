@@ -2,20 +2,46 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>library</title>
+        <title>📚2go</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <!-- header -->
         <header>
-            <h1>Library2Go 📚</h1>
+            <h2>library2go</h2>
         </header>
             <!-- main -->
             <div class="main">
                 <span class="book-span">Click + to add <br> to your library</span>
-                <button class="book-btn" onclick="">+ Book</button>
+                <button class="add-btn" onclick="">+</button>
+            </div>
 
-                <dialog class="dialog">
+                <div id="add-form" class="book-form">
+                    <form class="sub-form">
+                        <legend>Add new book to library:</legend>
+                        <div class="sub-form">
+                            <label for="title">Title</label>
+                            <input id="'title" type="text" name="title" required>
+                        </div>
+                        <div class="sub-form">
+                            <label for="author">Author</label>
+                            <input id="author" type="text" name="author" required>
+                        </div>
+                        <div class="sub-form">
+                            <label for="pages">Pages</label>
+                            <input id="pages" type="number" name="pages" required>
+                        </div>
+                        <div class="sub-form read">
+                            <label for="checkbox">Read</label>
+                            <input id="read" type="checkbox" name="checkbox" required>
+                        </div>
+                        <div class="form-btn">
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+                <!-- <dialog class="dialog">
                     <form onsubmit="Book()">
                         <h5>Fill in below to add your book:</h5>
                         <label class="label">Title: </label>
@@ -29,14 +55,41 @@
                     </form>
                     <div class="btn-dialog">
                         <button class="cancel-btn">Cancel</button>
-                        <button class="close-btn">Submit</button>
+                        <button class="submit-btn">Submit</button>
                     </div>
                     
-                </dialog>
-            </div>
+                </dialog> -->
+            
 
             <!-- container -->
             <div class="container">
+                <div class="book-card">
+                    <div class="card">
+                        <h1 class="title">Fourth Wing</h1>
+                        <p class="author">Rebecca Yarros</p>
+                        <p class="pages">528 pages</p>
+                        <button class="read-btn">Read</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="card">
+                        <h1 class="title">title</h1>
+                        <p class="author">Author</p>
+                        <p class="pages">pages</p>
+                        <button class="read-btn">Read</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="card">
+                        <h1 class="title">title</h1>
+                        <p class="author">Author</p>
+                        <p class="pages">pages</p>
+                        <button class="read-btn">Read</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
             </div>
 
         <!-- script -->

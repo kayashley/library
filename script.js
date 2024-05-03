@@ -1,10 +1,14 @@
-const dialog = document.querySelector(".dialog"); // selects dialog box
-const bookBtn = document.querySelector(".book-btn"); // selects book button
-const closeBtn = document.querySelector(".close-btn"); // selects close button
-const cancelBtn = document.querySelector(".cancel-btn"); // selects cancel button
+const form = document.querySelector(".book-form"); // selects dialog box
+console.log(form);
 
-bookBtn.addEventListener("click", () => {
-  dialog.showModal();
+const submitBtn = document.querySelector(".submit-btn"); // selects close button
+
+const addBookBtn = document.querySelector(".add-btn"); // selects book button
+const addForm = document.getElementById("add-form");
+console.log(addForm);
+
+addBookBtn.addEventListener("click", () => {
+  form.style.visibility = "visible";
 
   const container = document.querySelector(".container"); // selects the container
   const bookCard = container.appendChild(document.createElement("div")); // creates each book card
@@ -13,21 +17,25 @@ bookBtn.addEventListener("click", () => {
   container.appendChild(bookCard);
 });
 
+const subContainer = document.createElement("div");
+subContainer.classList.add("sub-container");
+
+/* select each form input value */
+const title = document.getElementById("title").value;
+const author = document.getElementById("author").value;
+const pages = document.getElementById("pages").value;
+const checkRead = document.getElementById("read").checked;
+
 function AddToLibrary() {}
 
 /* BOOK BUTTON - user clicks the button to add a book */
-bookBtn.addEventListener("click", () => {
-  dialog.showModal();
+addBookBtn.addEventListener("click", () => {
+  // form.showModal();
 });
 
-/* CLOSE BUTTON - user clicks button to close dialog box */
-closeBtn.addEventListener("click", () => {
-  dialog.close();
+/* SUBMIT BUTTON - user clicks button to close dialog box */
+submitBtn.addEventListener("click", (e) => {
+  // e.preventDefault();
+  form.close();
   console.log("closed dialog");
-});
-
-/* CANCEL BUTTON - user clicks button to cancel their form */
-cancelBtn.addEventListener("click", () => {
-  dialog.close();
-  console.log("cancelled");
 });
