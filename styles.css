@@ -71,6 +71,7 @@ header {
 }
 
 .card {
+  color: black;
   flex-shrink: 0;
   background: rgb(238, 240, 245);
   border-radius: 8px;
@@ -94,10 +95,6 @@ header {
 .remove-btn:hover {
   cursor: pointer;
   background: rgb(219, 144, 144);
-}
-
-.sub-container {
-  background: black;
 }
 
 /* DIALOG */
